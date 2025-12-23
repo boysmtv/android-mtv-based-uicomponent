@@ -49,6 +49,9 @@ dependencies {
     implementation(project(":component:component-input"))
     implementation(project(":component:component-dialog"))
     implementation(project(":component:component-bottom-sheet"))
+    implementation(project(":component:component-card"))
+    implementation(project(":component:component-badge"))
+    implementation(project(":component:component-checkbox"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

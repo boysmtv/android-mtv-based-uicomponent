@@ -12,8 +12,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/component" />
+            <option value="$PROJECT_DIR$/component/component-badge" />
             <option value="$PROJECT_DIR$/component/component-bottom-sheet" />
             <option value="$PROJECT_DIR$/component/component-button" />
+            <option value="$PROJECT_DIR$/component/component-card" />
+            <option value="$PROJECT_DIR$/component/component-checkbox" />
             <option value="$PROJECT_DIR$/component/component-dialog" />
             <option value="$PROJECT_DIR$/component/component-input" />
             <option value="$PROJECT_DIR$/core" />

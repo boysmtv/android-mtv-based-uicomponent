@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootHybrid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <com.mtv.based.uicomponent.component.input.view.InputTextView
+        android:id="@+id/xmlInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:label="Email (XML)"
+        app:placeholder="Masukkan email"/>
+
+    <com.mtv.based.uicomponent.component.dialog.view.AppDialogView
+        android:id="@+id/xmlDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.mtv.based.uicomponent.sheet.view.AppBottomSheetView
+        android:id="@+id/xmlBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.mtv.based.uicomponent.component.card.view.AppCardView
+        android:id="@+id/xmlCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.mtv.based.uicomponent.component.badge.view.AppBadgeView
+        android:id="@+id/xmlBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.mtv.based.uicomponent.component.checkbox.view.AppCheckboxView
+        android:id="@+id/xmlCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
