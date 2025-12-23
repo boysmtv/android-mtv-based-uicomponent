@@ -37,11 +37,18 @@ android {
         jvmTarget = "11"
     }
     buildFeatures {
+        viewBinding = true
         compose = true
     }
 }
 
 dependencies {
+    implementation(project(":theme:theme-ui"))
+    implementation(project(":core:core-ui"))
+    implementation(project(":component:component-button"))
+    implementation(project(":component:component-input"))
+    implementation(project(":component:component-dialog"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
