@@ -1,2 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <declare-styleable name="ComponentButton">
+        <attr name="text" format="string"/>
+        <attr name="loading" format="boolean"/>
+        <attr name="enabled" format="boolean"/>
+    </declare-styleable>
+</resources>
