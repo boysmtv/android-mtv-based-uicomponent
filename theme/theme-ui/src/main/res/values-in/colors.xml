@@ -1,0 +1,8 @@
+<resources>
+    <color name="color_primary">#6750A4</color>
+    <color name="color_on_primary">#FFFFFF</color>
+
+    <color name="color_secondary">#625B71</color>
+    <color name="color_surface">#FFFFFF</color>
+    <color name="color_error">#B3261E</color>
+</resources>
