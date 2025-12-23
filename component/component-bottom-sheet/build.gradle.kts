@@ -1,11 +1,10 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "com.mtv.based.uicomponent.core.ui"
+    namespace = "com.mtv.based.uicomponent.sheet"
     compileSdk {
         version = release(36)
     }
@@ -40,15 +39,13 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:core-ui"))
     implementation(project(":theme:theme-ui"))
 
-    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-
-    implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.material3)
 }
-

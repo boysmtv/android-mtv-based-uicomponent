@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hybridRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- XML Input Field -->
+    <com.mtv.based.uicomponent.component.input.view.InputTextView
+        android:id="@+id/xmlInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:label="Email (XML)"
+        app:placeholder="Masukkan email"/>
+
+    <!-- XML Dialog -->
+    <com.mtv.based.uicomponent.component.dialog.view.AppDialogView
+        android:id="@+id/xmlDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Warning"
+        app:message="Ini dialog XML"
+        app:positiveText="OK"
+        app:negativeText="Cancel"/>
+</LinearLayout>
