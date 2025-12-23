@@ -1,4 +1,4 @@
-package com.mtv.based.uicomponent
+package com.mtv.based.uicomponent.sample
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
