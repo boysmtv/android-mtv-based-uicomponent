@@ -9,7 +9,9 @@ private val LightColors = AppColors(
     onPrimary = Color.White,
     background = Color.White,
     onBackground = Color.Black,
-    outline = Color(0xFFDDDDDD)
+    surface = Color.White,
+    onSurfaceVariant = Color(0xFF49454F),
+    outline = Color(0xFF79747E)
 )
 
 private val LocalColors = staticCompositionLocalOf { LightColors }

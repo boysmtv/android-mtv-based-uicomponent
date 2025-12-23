@@ -7,5 +7,7 @@ data class AppColors(
     val onPrimary: Color,
     val background: Color,
     val onBackground: Color,
-    val outline: Color
+    val outline: Color,
+    val surface: Color,
+    val onSurfaceVariant: Color,
 )
