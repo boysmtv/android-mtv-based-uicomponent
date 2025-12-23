@@ -45,12 +45,12 @@ component/
             │
 
 ┌──────────────┼──────────────┐
-▼ ▼ ▼
+▼              ▼              ▼
 component-input component-dialog component-bottom-sheet
 (InputTextField) (AppDialog) (AppBottomSheet)
 │ │ │
 └───────┬────────┴─────────┬───────┘
-│ │
+        │                  │
 XML wrapper Compose version
 (InputTextView) (AppTextField)
 (AppDialogView) (AppDialog)
@@ -126,9 +126,3 @@ binding.xmlBottomSheet.showBottomSheet("Title", "Message")
 binding.xmlBottomSheet.hideBottomSheet()
 
 ---
-
-Ini sudah **full 1 block** siap langsung di-copy ke GitHub repo.  
-
-Kalau mau, aku bisa buatkan **versi README dengan diagram dependency visual (SVG/PNG)** supaya lebih menarik dan gampang dipahami tim.  
-
-Apakah mau aku buatkan versi gambar itu juga?
