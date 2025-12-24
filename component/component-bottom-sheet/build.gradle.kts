@@ -50,4 +50,6 @@ dependencies {
     implementation(libs.androidx.compose.material3)
 
     implementation(platform(libs.androidx.compose.bom))
+
+    testImplementation(libs.junit)
 }
