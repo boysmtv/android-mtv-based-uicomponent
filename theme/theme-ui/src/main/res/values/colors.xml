@@ -1,0 +1,8 @@
+<resources>
+    <color name="color_primary">#6200EE</color> <!-- default color -->
+    <color name="color_secondary">#03DAC5</color>
+    <color name="color_error">#B00020</color>
+    <color name="color_surface">#FFFFFF</color>
+    <color name="color_on_primary">#FFFFFF</color>
+    <color name="outline">#000000</color>
+</resources>
