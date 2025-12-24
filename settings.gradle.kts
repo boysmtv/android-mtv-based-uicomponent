@@ -16,13 +16,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
         maven { url = uri("https://jitpack.io") }
     }
 }
 
 rootProject.name = "android-mtv-based-uicomponent"
 include(":app")
-include(":aggregator")
 include(":core:core-ui")
 include(":theme:theme-ui")
 include(":component:component-button")
