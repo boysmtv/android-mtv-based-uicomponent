@@ -30,8 +30,7 @@ import androidx.compose.ui.window.Dialog
 @Composable
 fun DialogCenterV1(
     state: ErrorDialogStateV1,
-    onPrimaryClick: () -> Unit,
-    onDismiss: () -> Unit = {}
+    onDismiss: () -> Unit
 ) {
     Dialog(onDismissRequest = onDismiss) {
         Card(
@@ -80,11 +79,11 @@ fun DialogCenterV1(
                 Spacer(Modifier.height(20.dp))
 
                 Button(
-                    onClick = onPrimaryClick,
+                    onClick = onDismiss,
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp)
                 ) {
-                    Text(state.primaryButtonText)
+                    Text("Close")
                 }
             }
         }
