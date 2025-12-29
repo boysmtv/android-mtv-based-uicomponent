@@ -53,6 +53,7 @@ dependencies {
     implementation(project(":component:component-badge"))
     implementation(project(":component:component-checkbox"))
 
+    implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
