@@ -27,13 +27,15 @@ subprojects {
                     }
                 }
 
-                repositories {
+                // Disable for Jitpack
+                /*repositories {
                     mavenLocal()
-                }
+                }*/
             }
 
             if (!signingKeyFile.isNullOrBlank() && !signingPassword.isNullOrBlank()) {
                 signing {
+                    setRequired { false } // Disable for Jitpack
                     useInMemoryPgpKeys(
                         file(signingKeyFile!!).readText(),
                         signingPassword!!
