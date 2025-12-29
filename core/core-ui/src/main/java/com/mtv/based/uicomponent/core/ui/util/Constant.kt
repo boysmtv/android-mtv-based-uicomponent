@@ -3,6 +3,9 @@ package com.mtv.based.uicomponent.core.ui.util
 object Constant {
 
     const val EMPTY_STRING = ""
+    const val ERROR_STRING = "ERROR"
+    const val OK_STRING = "OK"
+    const val WARNING_STRING = "WARNING"
 
     const val SPACE_STRING = " "
     const val DASH_STRING = "-"
