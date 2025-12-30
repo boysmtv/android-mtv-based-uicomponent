@@ -43,15 +43,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:core-ui"))
     implementation(project(":theme:theme-ui"))
-    implementation(project(":component:component-button"))
-    implementation(project(":component:component-input"))
-    implementation(project(":component:component-dialog"))
-    implementation(project(":component:component-bottom-sheet"))
-    implementation(project(":component:component-card"))
-    implementation(project(":component:component-badge"))
-    implementation(project(":component:component-checkbox"))
+    implementation(project(":core:component"))
 
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)

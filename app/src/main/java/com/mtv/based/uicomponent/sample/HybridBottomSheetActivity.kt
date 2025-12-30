@@ -14,9 +14,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
+import com.mtv.based.uicomponent.core.component.sheet.BottomSheetState
+import com.mtv.based.uicomponent.core.component.sheet.compose.AppBottomSheet
 import com.mtv.based.uicomponent.databinding.ActivityHybridBottomSheetBinding
-import com.mtv.based.uicomponent.sheet.BottomSheetState
-import com.mtv.based.uicomponent.sheet.compose.AppBottomSheet
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
 class HybridBottomSheetActivity : ComponentActivity() {

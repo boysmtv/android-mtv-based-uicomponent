@@ -11,16 +11,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/component" />
-            <option value="$PROJECT_DIR$/component/component-badge" />
-            <option value="$PROJECT_DIR$/component/component-bottom-sheet" />
-            <option value="$PROJECT_DIR$/component/component-button" />
-            <option value="$PROJECT_DIR$/component/component-card" />
-            <option value="$PROJECT_DIR$/component/component-checkbox" />
-            <option value="$PROJECT_DIR$/component/component-dialog" />
-            <option value="$PROJECT_DIR$/component/component-input" />
             <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/core/core-ui" />
+            <option value="$PROJECT_DIR$/core/component" />
+            <option value="$PROJECT_DIR$/core/ui" />
             <option value="$PROJECT_DIR$/theme" />
             <option value="$PROJECT_DIR$/theme/theme-ui" />
           </set>
