@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,6 +15,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.mtv.based.uicomponent.core.component.badge.compose.AppBadge
@@ -23,6 +25,8 @@ import com.mtv.based.uicomponent.core.component.dialog.DialogState
 import com.mtv.based.uicomponent.core.component.dialog.compose.AppDialog
 import com.mtv.based.uicomponent.core.component.input.InputState
 import com.mtv.based.uicomponent.core.component.input.compose.AppTextField
+import com.mtv.based.uicomponent.core.component.loading.LoadingV1
+import com.mtv.based.uicomponent.core.component.loading.LoadingV2
 import com.mtv.based.uicomponent.core.component.sheet.BottomSheetState
 import com.mtv.based.uicomponent.core.component.sheet.compose.AppBottomSheet
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
@@ -88,6 +92,13 @@ class SampleAllComposeActivity : ComponentActivity() {
                         state = bottomSheetState,
                         onDismiss = { bottomSheetState = BottomSheetState.Hidden }
                     )
+
+                    Box(
+                        modifier = Modifier.fillMaxSize(),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        LoadingV2()
+                    }
 
                     // Card + Badge + Checkbox
                     AppCard(title = "Compose Card") {

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Androidmtvbaseduicomponent">
         <activity
-            android:name=".sample.SampleAllHybridActivity"
+            android:name=".sample.SampleAllComposeActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Androidmtvbaseduicomponent">
