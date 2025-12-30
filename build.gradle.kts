@@ -28,9 +28,9 @@ subprojects {
                 }
 
                 // Disable for Jitpack
-                /*repositories {
+                repositories {
                     mavenLocal()
-                }*/
+                }
             }
 
             if (!signingKeyFile.isNullOrBlank() && !signingPassword.isNullOrBlank()) {
@@ -52,15 +52,9 @@ tasks.register("publishAllModulesToMavenLocal") {
     description = "Clean, assemble release, and publish all modules to Maven Local"
 
     val modules = listOf(
-        ":core:core-ui",
+        ":core:ui",
+        ":core:component",
         ":theme:theme-ui",
-        ":component:component-button",
-        ":component:component-input",
-        ":component:component-dialog",
-        ":component:component-bottom-sheet",
-        ":component:component-card",
-        ":component:component-badge",
-        ":component:component-checkbox",
     )
 
     modules.forEach { modulePath ->
