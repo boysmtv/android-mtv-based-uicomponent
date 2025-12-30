@@ -8,16 +8,16 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
-import com.mtv.based.uicomponent.component.badge.compose.AppBadge
-import com.mtv.based.uicomponent.component.card.compose.AppCard
-import com.mtv.based.uicomponent.component.checkbox.compose.AppCheckbox
-import com.mtv.based.uicomponent.component.dialog.DialogState
-import com.mtv.based.uicomponent.component.dialog.compose.AppDialog
-import com.mtv.based.uicomponent.component.input.InputState
-import com.mtv.based.uicomponent.component.input.compose.AppTextField
+import com.mtv.based.uicomponent.core.component.badge.compose.AppBadge
+import com.mtv.based.uicomponent.core.component.card.compose.AppCard
+import com.mtv.based.uicomponent.core.component.checkbox.compose.AppCheckbox
+import com.mtv.based.uicomponent.core.component.dialog.DialogState
+import com.mtv.based.uicomponent.core.component.dialog.compose.AppDialog
+import com.mtv.based.uicomponent.core.component.input.InputState
+import com.mtv.based.uicomponent.core.component.input.compose.AppTextField
+import com.mtv.based.uicomponent.core.component.sheet.BottomSheetState
+import com.mtv.based.uicomponent.core.component.sheet.compose.AppBottomSheet
 import com.mtv.based.uicomponent.databinding.ActivityAllSampleBinding
-import com.mtv.based.uicomponent.sheet.BottomSheetState
-import com.mtv.based.uicomponent.sheet.compose.AppBottomSheet
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
 class SampleAllHybridActivity : ComponentActivity() {

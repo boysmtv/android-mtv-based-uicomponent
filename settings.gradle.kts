@@ -23,12 +23,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "android-mtv-based-uicomponent"
 include(":app")
-include(":core:core-ui")
+include(":core:component")
+include(":core:ui")
 include(":theme:theme-ui")
-include(":component:component-button")
-include(":component:component-input")
-include(":component:component-dialog")
-include(":component:component-bottom-sheet")
-include(":component:component-card")
-include(":component:component-badge")
-include(":component:component-checkbox")

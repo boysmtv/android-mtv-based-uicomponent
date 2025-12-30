@@ -9,7 +9,7 @@
     android:padding="16dp">
 
     <!-- XML Input Field -->
-    <com.mtv.based.uicomponent.component.input.view.InputTextView
+    <com.mtv.based.uicomponent.core.component.input.view.InputTextView
         android:id="@+id/xmlInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         app:placeholder="Masukkan email"/>
 
     <!-- XML Dialog -->
-    <com.mtv.based.uicomponent.component.dialog.view.AppDialogView
+    <com.mtv.based.uicomponent.core.component.dialog.view.AppDialogView
         android:id="@+id/xmlDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
