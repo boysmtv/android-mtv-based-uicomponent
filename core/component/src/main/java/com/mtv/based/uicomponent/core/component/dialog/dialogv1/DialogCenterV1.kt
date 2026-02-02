@@ -11,9 +11,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -29,7 +28,9 @@ import androidx.compose.ui.window.Dialog
 
 @Composable
 fun DialogCenterV1(
-    state: ErrorDialogStateV1,
+    state: DialogStateV1,
+    onPrimaryClick: (() -> Unit)? = null,
+    onSecondaryClick: (() -> Unit)? = null,
     onDismiss: () -> Unit
 ) {
     Dialog(onDismissRequest = onDismiss) {
@@ -47,16 +48,14 @@ fun DialogCenterV1(
                 Box(
                     modifier = Modifier
                         .size(64.dp)
-                        .background(
-                            MaterialTheme.colorScheme.error,
-                            CircleShape
-                        ),
+                        .background(dialogColor(state.type), CircleShape),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
-                        Icons.Default.Close,
+                        imageVector = dialogIcon(state.type),
                         contentDescription = null,
-                        tint = Color.White
+                        tint = Color.White,
+                        modifier = Modifier.size(32.dp)
                     )
                 }
 
@@ -76,14 +75,50 @@ fun DialogCenterV1(
                     textAlign = TextAlign.Center
                 )
 
-                Spacer(Modifier.height(20.dp))
+                Spacer(Modifier.height(24.dp))
 
-                Button(
-                    onClick = onDismiss,
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp)
-                ) {
-                    Text("Close")
+                // ===== Buttons =====
+                if (state.secondaryButtonText != null && onSecondaryClick != null) {
+
+                    Column {
+                        Button(
+                            onClick = {
+                                onPrimaryClick?.invoke()
+                                onDismiss()
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Text(state.primaryButtonText)
+                        }
+
+                        Spacer(Modifier.height(8.dp))
+
+                        Button(
+                            onClick = {
+                                onSecondaryClick()
+                                onDismiss()
+                            },
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(12.dp),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                                contentColor = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        ) {
+                            Text(state.secondaryButtonText)
+                        }
+                    }
+
+                } else {
+
+                    Button(
+                        onClick = onDismiss, // ✅ DISMISS ONLY
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(12.dp)
+                    ) {
+                        Text(state.primaryButtonText)
+                    }
                 }
             }
         }

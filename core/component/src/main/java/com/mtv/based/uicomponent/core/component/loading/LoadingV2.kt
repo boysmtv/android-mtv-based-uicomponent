@@ -82,7 +82,7 @@ fun DoubleArcOppositeLoadingIndicator(
         )
 
         drawArc(
-            color = color.copy(alpha = 0.65f),
+            color = color,
             startAngle = innerRotation.value,
             sweepAngle = 200f,
             useCenter = false,

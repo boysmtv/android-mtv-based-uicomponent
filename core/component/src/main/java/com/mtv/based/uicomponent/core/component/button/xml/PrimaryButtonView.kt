@@ -9,6 +9,7 @@ import androidx.core.content.withStyledAttributes
 import com.mtv.based.uicomponent.core.component.button.ButtonState
 import com.mtv.based.uicomponent.core.component.R
 import com.mtv.based.uicomponent.core.component.button.compose.PrimaryButton
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
 class PrimaryButtonView @JvmOverloads constructor(
@@ -16,7 +17,7 @@ class PrimaryButtonView @JvmOverloads constructor(
     attrs: AttributeSet? = null
 ) : FrameLayout(context, attrs) {
 
-    private var text: String = ""
+    private var text: String = EMPTY_STRING
     private var state: ButtonState = ButtonState.Enabled
     private var onClick: (() -> Unit)? = null
 

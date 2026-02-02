@@ -43,8 +43,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":theme:theme-ui"))
     implementation(project(":core:component"))
+    implementation(project(":core:ui"))
+    implementation(project(":theme:theme-ui"))
 
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)

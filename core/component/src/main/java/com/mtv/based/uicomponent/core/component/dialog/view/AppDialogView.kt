@@ -9,6 +9,8 @@ import androidx.core.content.withStyledAttributes
 import com.mtv.based.uicomponent.core.component.R
 import com.mtv.based.uicomponent.core.component.dialog.DialogState
 import com.mtv.based.uicomponent.core.component.dialog.compose.AppDialog
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.OK_STRING
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
 class AppDialogView @JvmOverloads constructor(
@@ -23,9 +25,9 @@ class AppDialogView @JvmOverloads constructor(
 
     init {
         context.withStyledAttributes(attrs, R.styleable.ComponentDialog) {
-            val title = getString(R.styleable.ComponentDialog_title) ?: ""
-            val message = getString(R.styleable.ComponentDialog_message) ?: ""
-            val positive = getString(R.styleable.ComponentDialog_positiveText) ?: "OK"
+            val title = getString(R.styleable.ComponentDialog_title) ?: EMPTY_STRING
+            val message = getString(R.styleable.ComponentDialog_message) ?: EMPTY_STRING
+            val positive = getString(R.styleable.ComponentDialog_positiveText) ?: OK_STRING
             val negative = getString(R.styleable.ComponentDialog_negativeText)
 
             state = if (title.isNotEmpty() || message.isNotEmpty()) {
@@ -49,7 +51,7 @@ class AppDialogView @JvmOverloads constructor(
         }
     }
 
-    fun showDialog(title: String, message: String, positive: String = "OK", negative: String? = null) {
+    fun showDialog(title: String, message: String, positive: String = OK_STRING, negative: String? = null) {
         state = DialogState.Visible(title, message, positive, negative)
         render()
     }

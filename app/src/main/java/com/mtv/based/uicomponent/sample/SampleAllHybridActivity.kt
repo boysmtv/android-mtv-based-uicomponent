@@ -17,6 +17,8 @@ import com.mtv.based.uicomponent.core.component.input.InputState
 import com.mtv.based.uicomponent.core.component.input.compose.AppTextField
 import com.mtv.based.uicomponent.core.component.sheet.BottomSheetState
 import com.mtv.based.uicomponent.core.component.sheet.compose.AppBottomSheet
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.OK_STRING
 import com.mtv.based.uicomponent.databinding.ActivityAllSampleBinding
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
@@ -57,7 +59,7 @@ class SampleAllHybridActivity : ComponentActivity() {
                             .padding(16.dp),
                         verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
-                        var email by remember { mutableStateOf("") }
+                        var email by remember { mutableStateOf(EMPTY_STRING) }
                         var emailError by remember { mutableStateOf(false) }
                         var dialogState by remember { mutableStateOf<DialogState>(DialogState.Hidden) }
                         var bottomSheetState by remember {
@@ -83,7 +85,7 @@ class SampleAllHybridActivity : ComponentActivity() {
                                 dialogState = DialogState.Visible(
                                     title = "Compose Dialog",
                                     message = "Email: $email",
-                                    positiveText = "OK"
+                                    positiveText = OK_STRING
                                 )
                             }
                         }) { Text("Submit (Compose)") }
