@@ -21,7 +21,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "android-mtv-based-uicomponent"
+rootProject.name = "App UI Component"
 include(":app")
 include(":core:component")
 include(":core:ui")

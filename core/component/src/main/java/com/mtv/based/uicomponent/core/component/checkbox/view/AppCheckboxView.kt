@@ -6,6 +6,7 @@ import android.widget.FrameLayout
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import com.mtv.based.uicomponent.core.component.checkbox.compose.AppCheckbox
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
 class AppCheckboxView @JvmOverloads constructor(
@@ -26,7 +27,7 @@ class AppCheckboxView @JvmOverloads constructor(
                 AppCheckbox(
                     checked = checked,
                     onCheckedChange = onChange,
-                    label = ""
+                    label = EMPTY_STRING
                 )
             }
         }

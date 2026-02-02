@@ -10,6 +10,7 @@ import androidx.core.content.withStyledAttributes
 import com.mtv.based.uicomponent.core.component.R
 import com.mtv.based.uicomponent.core.component.input.compose.AppTextField
 import com.mtv.based.uicomponent.core.component.input.InputState
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
 class InputTextView @JvmOverloads constructor(
@@ -17,7 +18,7 @@ class InputTextView @JvmOverloads constructor(
     attrs: AttributeSet? = null
 ) : FrameLayout(context, attrs) {
 
-    private val textState = mutableStateOf("")
+    private val textState = mutableStateOf(EMPTY_STRING)
     private val state = mutableStateOf<InputState>(InputState.Enabled)
     private var label: String? = null
     private var placeholder: String? = null

@@ -29,6 +29,7 @@ import com.mtv.based.uicomponent.core.component.loading.LoadingV1
 import com.mtv.based.uicomponent.core.component.loading.LoadingV2
 import com.mtv.based.uicomponent.core.component.sheet.BottomSheetState
 import com.mtv.based.uicomponent.core.component.sheet.compose.AppBottomSheet
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
 class SampleAllComposeActivity : ComponentActivity() {
@@ -43,7 +44,7 @@ class SampleAllComposeActivity : ComponentActivity() {
                         .padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
-                    var email by remember { mutableStateOf("") }
+                    var email by remember { mutableStateOf(EMPTY_STRING) }
                     var emailError by remember { mutableStateOf(false) }
                     var dialogState by remember { mutableStateOf<DialogState>(DialogState.Hidden) }
                     var bottomSheetState by remember { mutableStateOf<BottomSheetState>(BottomSheetState.Hidden) }
@@ -67,7 +68,7 @@ class SampleAllComposeActivity : ComponentActivity() {
                             dialogState = DialogState.Visible(
                                 title = "Compose Dialog",
                                 message = "Email: $email",
-                                positiveText = "OK"
+                                positiveText = OK_STRING
                             )
                         }
                     }) { Text("Submit") }

@@ -11,6 +11,7 @@ import com.mtv.based.uicomponent.core.component.input.InputState
 import com.mtv.based.uicomponent.core.component.input.compose.AppTextField
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 import androidx.activity.compose.setContent
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
 
 class SampleInputActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +31,7 @@ class SampleInputActivity : ComponentActivity() {
 
 @Composable
 fun InputScreen() {
-    var email by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf(EMPTY_STRING) }
     var emailError by remember { mutableStateOf(false) }
 
     Column(

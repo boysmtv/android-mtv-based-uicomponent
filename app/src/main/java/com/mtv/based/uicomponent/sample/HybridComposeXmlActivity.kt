@@ -12,6 +12,7 @@ import com.mtv.based.uicomponent.core.component.dialog.DialogState
 import com.mtv.based.uicomponent.core.component.dialog.compose.AppDialog
 import com.mtv.based.uicomponent.core.component.input.InputState
 import com.mtv.based.uicomponent.core.component.input.compose.AppTextField
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
 import com.mtv.based.uicomponent.databinding.ActivityHybridBinding
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
@@ -43,7 +44,7 @@ class HybridComposeXmlActivity : ComponentActivity() {
             binding.xmlDialog.showDialog(
                 title = "Warning XML",
                 message = "Dialog muncul dari InputTextView XML",
-                positive = "OK",
+                positive = OK_STRING,
                 negative = "Cancel"
             )
         }
@@ -52,7 +53,7 @@ class HybridComposeXmlActivity : ComponentActivity() {
 
 @Composable
 fun ComposeInputAndDialog() {
-    var email by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf(EMPTY_STRING) }
     var emailError by remember { mutableStateOf(false) }
     var dialogState by remember { mutableStateOf<DialogState>(DialogState.Hidden) }
 
@@ -81,7 +82,7 @@ fun ComposeInputAndDialog() {
                 dialogState = DialogState.Visible(
                     title = "Success",
                     message = "Email Compose: $email",
-                    positiveText = "OK"
+                    positiveText = OK_STRING
                 )
             }
         }) {

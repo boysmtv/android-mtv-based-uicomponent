@@ -9,6 +9,7 @@ import androidx.core.content.withStyledAttributes
 import com.mtv.based.uicomponent.core.component.R
 import com.mtv.based.uicomponent.core.component.sheet.BottomSheetState
 import com.mtv.based.uicomponent.core.component.sheet.compose.AppBottomSheet
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
 class AppBottomSheetView @JvmOverloads constructor(
@@ -23,8 +24,8 @@ class AppBottomSheetView @JvmOverloads constructor(
 
     init {
         context.withStyledAttributes(attrs, R.styleable.ComponentBottomSheet) {
-            val title = getString(R.styleable.ComponentBottomSheet_title) ?: ""
-            val message = getString(R.styleable.ComponentBottomSheet_message) ?: ""
+            val title = getString(R.styleable.ComponentBottomSheet_title) ?: EMPTY_STRING
+            val message = getString(R.styleable.ComponentBottomSheet_message) ?: EMPTY_STRING
             if (title.isNotEmpty() || message.isNotEmpty()) {
                 state = BottomSheetState.Visible(title, message)
             }

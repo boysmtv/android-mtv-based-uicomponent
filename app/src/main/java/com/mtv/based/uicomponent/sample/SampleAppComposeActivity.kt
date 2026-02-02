@@ -12,6 +12,8 @@ import com.mtv.based.uicomponent.core.component.dialog.DialogState
 import com.mtv.based.uicomponent.core.component.dialog.compose.AppDialog
 import com.mtv.based.uicomponent.core.component.input.InputState
 import com.mtv.based.uicomponent.core.component.input.compose.AppTextField
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
+import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.OK_STRING
 import com.mtv.based.uicomponent.theme.ui.compose.AppTheme
 
 class SampleAppComposeActivity : ComponentActivity() {
@@ -32,7 +34,7 @@ class SampleAppComposeActivity : ComponentActivity() {
 
 @Composable
 fun SampleScreen() {
-    var email by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf(EMPTY_STRING) }
     var emailError by remember { mutableStateOf(false) }
     var dialogState by remember { mutableStateOf<DialogState>(DialogState.Hidden) }
 
@@ -64,7 +66,7 @@ fun SampleScreen() {
                     dialogState = DialogState.Visible(
                         title = "Success",
                         message = "Email terisi: $email",
-                        positiveText = "OK"
+                        positiveText = OK_STRING
                     )
                 }
             }
