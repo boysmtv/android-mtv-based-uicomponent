@@ -12,7 +12,7 @@ import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.EMPTY_STRING
 import com.mtv.based.uicomponent.core.ui.util.Constants.Companion.OK_STRING
 
 data class DialogStateV1(
-    val type: DialogType = DialogType.SUCCESS,
+    val type: DialogType = DialogType.WARNING,
     val title: String = EMPTY_STRING,
     val message: String = EMPTY_STRING,
     val primaryButtonText: String = OK_STRING,
