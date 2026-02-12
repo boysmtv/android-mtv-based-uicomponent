@@ -42,6 +42,7 @@ class Constants {
         const val DEFAULT_PAGE = 1
         const val DEFAULT_PAGE_SIZE = 10
 
+        const val WEAK_PASSWORD = "Password must be at least 8 characters and include uppercase, lowercase, number, and symbol"
     }
 
 }
